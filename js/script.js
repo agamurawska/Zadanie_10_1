@@ -4,11 +4,11 @@
 
 		// new button to every paragraph
 	$("p").each(function(index, element){
-		var button = '<button class="btn" data-tmp="' + index + '">Click me</button>';
+		var button = $('<button class="btn" data-tmp="' + index + '">Click me</button>');
 		$(element).append(button);
 
 		//pop up window on click on the button
-		$("button").click(function(){
+		button.click(function(){
 			alert($(this).attr("data-tmp"));
 		})
 	})	
